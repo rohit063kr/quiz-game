@@ -252,10 +252,14 @@ class View {
   }
 
   _generateResultMarkup(data) {
-    data.points = data.correctAns + data.wrongeAns;
+    data.points = data.correctAns - data.wrongeAns;
+    console.log(data.totalQuestions);
+    console.log(data.correctAns, data.wrongeAns);
     const html = `
     <div class="results">
-    <h3 class="results__heading">Congrates, you completed the quiz</h3>
+    <h3 class="results__heading">${
+      data.timeTaken ? 'Congrates! you completed the quiz' : "It's timeout"
+    },</h3>
     <h4>This is your performance</h4>
 
     <ul class="results__list">
@@ -266,13 +270,13 @@ class View {
         Wronge answers: ${data.wrongeAns} out of ${data.totalQuestions}
       </li>
       <li class="results__list-items results__other">
-      Total attempt: ${data.points}
+      Total attempt: ${data.correctAns + data.wrongeAns}
     </li>
       <li class="results__list-items results__other">
      Skip: ${data.totalQuestions - (data.correctAns + data.wrongeAns)}
   </li>
       <li class="results__list-items results__other">
-       Total time taken: ${data.timeTaken}
+       Total time taken: ${data.timeTaken} sec
       </li>
      
     <li class="results__list-items results__total">
