@@ -265,7 +265,7 @@ class View {
         Correct answers: ${data.correctAns} out of ${data.totalQuestions}
       </li>
       <li class="results__list-items results__wronge">
-        Wronge answers: ${data.wrongeAns} out of 5
+        Wronge answers: ${data.wrongeAns} out of ${data.totalQuestions}
       </li>
       <li class="results__list-items results__other">
       Total attempt: ${data.points}
