@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizz app</title>
+    <link rel="stylesheet" href="assets/sass/style.scss" />
+    <script defer src="assets/js/controller.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <h2 class="form__heading">Welcome to the quiz game</h2>
+        <ul class="form__list">
+          <li>
+            This game also included negative marking, so choose options
+            carefully
+          </li>
+          <li>You will not rewarded with anything in this game</li>
+          <li>
+            This is just a game build by rohit kumar(me) for practicing purpose
+          </li>
+        </ul>
+        <h3>Please select the best setting for your game</h3>
+        <form class="form__inputs">
+          <input
+            type="number"
+            class="form__select"
+            id="limit"
+            placeholder="Number of questions (by default '5')"
+          />
+          <select class="form__select" id="difficulty">
+            <option value="">Game Dificulty (default "Medium")</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">hard</option>
+          </select>
+          <input type="submit" class="form__select form__submit" value="GO" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

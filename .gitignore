@@ -1,0 +1,8 @@
+.cache
+dist
+node_modules
+design.png
+flowchart.png
+.vscode
+yarn.lock
+
