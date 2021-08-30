@@ -176,7 +176,7 @@ class View {
   _slide(result, skip = true) {
     if (this._slideCounter === this._data.length - 1) {
       // this._btns.removeEventListener('click', this._slide);
-      return this._renderResults(result);
+      return setTimeout(() => this._renderResults(result), 1000);
     }
     if (this._slideCounter !== this._data.length - 1 && skip)
       this._slideCounter++;
