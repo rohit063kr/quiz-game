@@ -69,9 +69,9 @@ class View {
   }
 
   _convertBtnForRestart() {
-    this._btns.value = 'Restart quiz';
-    this._btns.addEventListener('click', function () {
-      window.location.reload();
+    this._btns.querySelector('.btnSkip').value = 'Restart quiz';
+    this._btns.addEventListener('click', function (e) {
+      if (e.target.closest('.btnSkip')) window.location.reload();
     });
   }
 
