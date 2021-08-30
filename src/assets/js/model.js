@@ -36,7 +36,7 @@ export const getQuestions = async function (
     }
   );
   const data = await res.json();
-
+  //
   state.questions = data.map(el => {
     const correctAnswer = el.correct_answer?.slice(-1);
 
