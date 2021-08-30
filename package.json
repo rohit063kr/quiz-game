@@ -6,7 +6,7 @@
   "author": "",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --dist-dir ./dist"
+    "build": "parcel build src/index.html --out-dir ./dist"
   },
   "devDependencies": {
     "core-js": "^3.16.1",
