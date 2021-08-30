@@ -72,7 +72,7 @@ export const getQuestions = async function (
     state.totalQuestions = state.questions.length;
     state.results.totalQuestions = state.questions.length;
   } catch (err) {
-    throw err;
+    throw 'Please check your internet connection or try again!';
   }
 };
 

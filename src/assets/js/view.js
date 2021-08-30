@@ -14,6 +14,10 @@ class View {
   _data = '';
   _slideCounter = 0;
 
+  renderError(msg) {
+    this.renderLoader(msg);
+  }
+
   getElements() {
     this._parentElement = document.querySelector('.query');
     this._btns = document.querySelector('.footer__btns');
