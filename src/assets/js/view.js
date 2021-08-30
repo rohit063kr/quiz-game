@@ -168,7 +168,6 @@ class View {
 
   // Preparing for slide
   settingUpSlide() {
-    console.log(this._data);
     const parentBoxWidth = this._data.length * 100 + '%';
     this._parentElement.style.width = parentBoxWidth;
   }
@@ -211,7 +210,6 @@ class View {
     const curQuestionPage = Array.from(
       document.querySelectorAll('.query__question-box')
     )[this._slideCounter];
-    console.log(curQuestionPage);
     curQuestionPage.querySelector('.query__question-num').textContent =
       this._slideCounter + 1;
   }
@@ -322,7 +320,6 @@ class View {
 
               const temp = document.createElement('div');
               temp.appendChild(opt);
-              console.log(temp.innerHTML);
 
               return temp.innerHTML;
             })
