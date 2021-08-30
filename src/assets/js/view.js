@@ -69,9 +69,10 @@ class View {
   }
 
   _convertBtnForRestart() {
-    this._btns.querySelector('.btnSkip').value = 'Restart quiz';
+    this._btns.querySelector('.btn-skip').value = 'Restart quiz';
+    this._btns.querySelector('.btn-prev').style.display = 'none';
     this._btns.addEventListener('click', function (e) {
-      if (e.target.closest('.btnSkip')) window.location.reload();
+      if (e.target.closest('.btn-skip')) window.location.reload();
     });
   }
 
