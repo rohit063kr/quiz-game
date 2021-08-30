@@ -34,7 +34,6 @@ class View {
 
   setTimer(timer) {
     this._timer = timer;
-    clearInterval(this._timer);
   }
 
   _removeTimer() {
