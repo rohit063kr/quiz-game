@@ -22,7 +22,10 @@ const controleQuestion = async function (limit, difficulty) {
     View.render(model.state.questions, model.state.results);
 
     //startTimer
-    timer = model.queryTimer();
+    if (difficulty === 'easy') timer = model.queryTimer(30);
+    if (difficulty === 'medium') timer = model.queryTimer(20);
+    if (difficulty === 'hard') timer = model.queryTimer(10);
+
     view.setTimer(timer);
 
     // Update timer dom

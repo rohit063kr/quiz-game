@@ -76,8 +76,8 @@ export const getQuestions = async function (
   }
 };
 
-export const queryTimer = function () {
-  let time = TIMEOUT_SEC;
+export const queryTimer = function (timeSec = TIMEOUT_SEC) {
+  let time = timeSec;
   state.results.time = TIMEOUT_SEC;
   const timer = setInterval(function () {
     time--;

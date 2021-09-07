@@ -184,7 +184,11 @@ class View {
     }
     if (this._slideCounter !== this._data.length - 1 && skip)
       this._slideCounter++;
-    if (this._slideCounter !== this._data.length - 1 && !skip)
+    if (
+      this._slideCounter !== this._data.length - 1 &&
+      !skip &&
+      this._slideCounter
+    )
       this._slideCounter--;
 
     // getting all questions-box
@@ -221,7 +225,7 @@ class View {
   _getAllElements() {
     return this._parentElement.querySelectorAll('.query__question-box');
   }
-
+k
   setupData(data) {
     this._data = data;
   }
